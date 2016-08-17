@@ -16,13 +16,17 @@ Pre-requisites: NodeJS (and npm)
 3. Install Babel's ES2015 preset to be able to transpile ES2015 features
 
   npm install --save-dev babel-preset-es2015
-4. Update package.json's "script" key to have a build key that triggers the babel compiler
+
+4. Create a .babelrc file to specify the es2015 preset that babel should use.
+(preset is a bundle of plugins)
+
+5. Update package.json's "script" key to have a build key that triggers the babel compiler
 
 	"build": "babel src -d lib"
-5. Create a src directory to save source files 
-6. Create a test.js with some sample JavaScript code...say console.log('foo)
-7. Transpile away !
+6. Create a src directory to save source files 
+7. Create a test.js with some sample JavaScript code...say console.log('foo)
+8. Transpile away !
 
 	npm run build
 	
-8. Creates a lib directory and adds "use strict" pragma at the top of the file
+9. Creates a lib directory and adds "use strict" pragma at the top of the file
