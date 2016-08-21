@@ -4,7 +4,7 @@
   "description": "notes and code samples of es.next features",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib --source-maps"
   },
   "repository": {
     "type": "git",

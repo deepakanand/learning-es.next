@@ -1,5 +1,14 @@
 # learning-es.next
-My code samples and notes on ES6/7/n features
+My code samples and notes on ES6/7/n features.
+I am taking a 2-pronged approach to learning the new JavaScript language features:
+
+1. Read Understanding ES6(by Nicholas Zakas) and make notes. 
+
+Books notes are in the directory named as such.
+
+2. Work on a project by following a tutorial/blog article etc
+
+Most of the rest of this repo is project related
 
 # Before starting to code...
 - Set up some tools to transpile JavaScript
@@ -20,9 +29,11 @@ Pre-requisites: NodeJS (and npm)
 4. Create a .babelrc file to specify the es2015 preset that babel should use.
 (preset is a bundle of plugins)
 
-5. Update package.json's "script" key to have a build key that triggers the babel compiler
+5. Update package.json's "script" property to trigger the babel compiler
 
-	"build": "babel src -d lib"
+	"build": "babel src -d lib --source-maps"
+
+	The source maps options generates a .js.map file that helps debug source files.
 6. Create a src directory to save source files 
 7. Create a test.js with some sample JavaScript code...say console.log('foo)
 8. Transpile away !
@@ -30,3 +41,7 @@ Pre-requisites: NodeJS (and npm)
 	npm run build
 	
 9. Creates a lib directory and adds "use strict" pragma at the top of the file
+
+## Resources
+- https://www.safaribooksonline.com/library/view/learning-ecmascript-6
+- https://www.packtpub.com/code_download/26340
