@@ -34,6 +34,7 @@ Pre-requisites: NodeJS (and npm)
 	"build": "babel src -d lib --source-maps"
 
 	The source maps options generates a .js.map file that helps debug source files.
+	
 6. Create a src directory to save source files 
 7. Create a test.js with some sample JavaScript code...say console.log('foo)
 8. Transpile away !

@@ -1,16 +1,11 @@
+import {Environment} from './environment.js'
+import {Bear} from './encounter.js';
+import {options, print} from './additions.js';
+
 const defaultLine = "Start your journey now...";
 const BR = '<br />';
 
-const print = (...args) => console.log(args[0] + ':' + args[1]);
-
-var options = {
-	_intro: "You can type",
-	_options: ['left', 'right', 'up', 'down', 'help'],
-	outputOptions() {
-		this._options.forEach(f =>
-			addToOutput(this._intro + " " + f));
-	}
-}
+let env = new Environment('Forest - ');
 
 function main() {
 	const enterElt = document.querySelector('#enter');
@@ -18,6 +13,8 @@ function main() {
 	enterElt.addEventListener('click', onClickEnter);
 
 	addToOutput();
+
+
 }
 
 function addToOutput(newLine = defaultLine) {
@@ -31,6 +28,12 @@ function onClickEnter() {
 
 	if (commands.value === 'help') {
 		options.outputOptions();
+	} else if(commands.value === 'left') {
+		addToOutput(env.stumbleUpon());
+	} else if(commands.value === 'right'){
+		addToOutput(env.stumbleUpon());
+	}else if(commands.value === 'down'){
+		addToOutput(env.stumbleUpon());
 	} else {
 		addToOutput(commands.value);
 	}

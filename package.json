@@ -4,7 +4,9 @@
   "description": "notes and code samples of es.next features",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib --source-maps"
+    "build-js": "babel src -d lib --source-maps",
+    "bundle-js": "webpack ./lib/test.js ./lib/bundle.js",
+    "build": "touch ./lib/bundle.js && rm ./lib/bundle.js && npm run build-js && npm run bundle-js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/deepakanand/learning-es.next#readme",
   "devDependencies": {
     "babel-cli": "^6.11.4",
-    "babel-preset-es2015": "^6.13.2"
+    "babel-preset-es2015": "^6.13.2",
+    "webpack": "~1.13.2"
   }
 }
